@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webapp1
-        image: sarvesh231926/kubernetesrepos:tagversion
+        image: sarvesh231926/tomcat01:tagversion
         ports:
         - containerPort: 8080
 ---
