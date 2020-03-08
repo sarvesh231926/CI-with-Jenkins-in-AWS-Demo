@@ -27,14 +27,14 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("sarvesh231926/kubernetesrepos:${env.BUILD_ID}")
+                    myapp = docker.build("sarvesh231926/tomcat01:${env.BUILD_ID}")
                 }
             }
         }
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', '66e5578ddcbd690ac1c1be2c98ce2154bc304986') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'sarvesh231926') {
                             myapp.push("${env.BUILD_ID}")
                     }
                 }
