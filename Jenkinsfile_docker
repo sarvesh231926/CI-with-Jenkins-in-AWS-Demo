@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'sarveshdevops'
         CLUSTER_NAME = 'sarvesh-cluster-kube'
         LOCATION = 'europe-west3-c'
-        CREDENTIALS_ID = 'kuberneteslogin'
+        CREDENTIALS_ID = 'SarveshDevOps'
     }
     stages {
         stage("Checkout code") {
@@ -34,7 +34,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', '09d8ae8a-8b43-48eb-8a02-9bd2ad3477a9') {
+                    docker.withRegistry('https://registry.hub.docker.com', '7d66e6f5-2816-4744-8ae7-ae7b5835cd18') {
                             myapp.push("${env.BUILD_ID}")
                     }
                 }
