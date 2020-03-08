@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'secure-totality-266019'
-        CLUSTER_NAME = 'cluster-k8s'
-        LOCATION = 'us-central1-c'
+        PROJECT_ID = 'sarveshdevops'
+        CLUSTER_NAME = 'sarvesh-cluster-kube'
+        LOCATION = 'europe-west3-c'
         CREDENTIALS_ID = 'kuberneteslogin'
     }
     stages {
@@ -27,7 +27,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("gcr.io/secure-totality-266019/kubernetesrepos:${env.BUILD_ID}")
+                    myapp = docker.build("gcr.io/sarveshdevops/kubernetesrepos:${env.BUILD_ID}")
                 }
             }
         }
