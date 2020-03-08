@@ -34,7 +34,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'sarvesh231926') {
+                    docker.withRegistry('https://registry.hub.docker.com', '66e5578ddcbd690ac1c1be2c98ce2154bc304986') {
                             myapp.push("${env.BUILD_ID}")
                     }
                 }
