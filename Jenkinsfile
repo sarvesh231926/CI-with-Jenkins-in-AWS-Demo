@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'sarveshdevops'
         CLUSTER_NAME = 'sarvesh-cluster-kube'
         LOCATION = 'europe-west3-c'
-        CREDENTIALS_ID = 'kuberneteslogin'
+        CREDENTIALS_ID = 'SarveshDevOps'
     }
     stages {
         stage("Checkout code") {
